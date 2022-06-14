@@ -336,7 +336,7 @@ doublereal MMCollisionInt::omega22(double ts, double deltastar)
         if (deltastar == 0.0) {
             values[i-i1] = omega22_table[8*i];
         } else {
-            values[i-i1] = poly5(deltastar, m_o22poly[i].data());
+            values[i-i1] = poly6(deltastar, m_o22poly[i].data());
         }
     }
     return quadInterp(log(ts), &m_logTemp[i1], values.data());
@@ -359,7 +359,7 @@ doublereal MMCollisionInt::astar(double ts, double deltastar)
         if (deltastar == 0.0) {
             values[i-i1] = astar_table[8*(i + 1)];
         } else {
-            values[i-i1] = poly5(deltastar, m_apoly[i].data());
+            values[i-i1] = poly6(deltastar, m_apoly[i].data());
         }
     }
     return quadInterp(log(ts), &m_logTemp[i1], values.data());
@@ -382,7 +382,7 @@ doublereal MMCollisionInt::bstar(double ts, double deltastar)
         if (deltastar == 0.0) {
             values[i-i1] = bstar_table[8*(i + 1)];
         } else {
-            values[i-i1] = poly5(deltastar, m_bpoly[i].data());
+            values[i-i1] = poly6(deltastar, m_bpoly[i].data());
         }
     }
     return quadInterp(log(ts), &m_logTemp[i1], values.data());
@@ -405,7 +405,7 @@ doublereal MMCollisionInt::cstar(double ts, double deltastar)
         if (deltastar == 0.0) {
             values[i-i1] = cstar_table[8*(i + 1)];
         } else {
-            values[i-i1] = poly5(deltastar, m_cpoly[i].data());
+            values[i-i1] = poly6(deltastar, m_cpoly[i].data());
         }
     }
     return quadInterp(log(ts), &m_logTemp[i1], values.data());
@@ -422,7 +422,7 @@ void MMCollisionInt::fit_omega22(int degree, doublereal deltastar,
         if (deltastar == 0.0) {
             values[i] = omega22_table[8*(i + m_nmin)];
         } else {
-            values[i] = poly5(deltastar, m_o22poly[i+m_nmin].data());
+            values[i] = poly6(deltastar, m_o22poly[i+m_nmin].data());
         }
     }
     w[0]= -1.0;
@@ -444,7 +444,7 @@ void MMCollisionInt::fit(int degree, doublereal deltastar,
         if (deltastar == 0.0) {
             values[i] = astar_table[8*(i + m_nmin + 1)];
         } else {
-            values[i] = poly5(deltastar, m_apoly[i+m_nmin].data());
+            values[i] = poly6(deltastar, m_apoly[i+m_nmin].data());
         }
     }
     w[0]= -1.0;
@@ -454,7 +454,7 @@ void MMCollisionInt::fit(int degree, doublereal deltastar,
         if (deltastar == 0.0) {
             values[i] = bstar_table[8*(i + m_nmin + 1)];
         } else {
-            values[i] = poly5(deltastar, m_bpoly[i+m_nmin].data());
+            values[i] = poly6(deltastar, m_bpoly[i+m_nmin].data());
         }
     }
     w[0]= -1.0;
@@ -464,7 +464,7 @@ void MMCollisionInt::fit(int degree, doublereal deltastar,
         if (deltastar == 0.0) {
             values[i] = cstar_table[8*(i + m_nmin + 1)];
         } else {
-            values[i] = poly5(deltastar, m_cpoly[i+m_nmin].data());
+            values[i] = poly6(deltastar, m_cpoly[i+m_nmin].data());
         }
     }
     w[0]= -1.0;
