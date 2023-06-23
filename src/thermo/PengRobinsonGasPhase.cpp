@@ -464,6 +464,156 @@ void PengRobinsonGasPhase::ReadCriticalProperties() const
             omega[k] = 0.0866;
             sigma[k] = 0.0;
             dipole[k] = 0.0;
+        } else if (speciesName(k) == "CH3OH") { // from here
+            IsCrit[k] = 1;
+            Tcrit[k] = 513;    // K
+            Pcrit[k] =  8.01e+06; // Pa
+            Vcrit[k] = 0.1179; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.556;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
+        } else if (speciesName(k) == "C2H2") {
+            IsCrit[k] = 1;
+            Tcrit[k] = 309.2;    // K
+            Pcrit[k] =  6.25e+06; // Pa
+            Vcrit[k] = 0.1129; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.19;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
+        } else if (speciesName(k) == "AC3H4") {
+            IsCrit[k] = 1;
+            Tcrit[k] = 385.4;    // K
+            Pcrit[k] =  5.32e+06; // Pa
+            Vcrit[k] = 0.162; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.313;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
+        } else if (speciesName(k) == "C2H5CHO") {
+            IsCrit[k] = 1;
+            Tcrit[k] = 515.3;    // K
+            Pcrit[k] =  6.33e+06; // Pa
+            Vcrit[k] = 0.176; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.313;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
+        } else if (speciesName(k) == "NC4H8") {
+            IsCrit[k] = 1;
+            Tcrit[k] = 419.6;    // K
+            Pcrit[k] =  4.02e+06; // Pa
+            Vcrit[k] = 0.240; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.191;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
+        } else if (speciesName(k) == "C4H6") {
+            IsCrit[k] = 1;
+            Tcrit[k] = 443.7;    // K
+            Pcrit[k] =  4.49e+06; // Pa
+            Vcrit[k] = 0.219; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.255;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
+        } else if (speciesName(k) == "C3H6") {
+            IsCrit[k] = 1;
+            Tcrit[k] = 365.0;    // K
+            Pcrit[k] =  4.61e+06; // Pa
+            Vcrit[k] = 0.1813; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.144;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
+        } else if (speciesName(k) == "NC5H10") {
+            IsCrit[k] = 1;
+            Tcrit[k] = 464.7;    // K
+            Pcrit[k] =  3.55e+06; // Pa
+            Vcrit[k] = 0.3026; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.233;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
+        } else if (speciesName(k) == "NC7H14") {
+            IsCrit[k] = 1;
+            Tcrit[k] = 537.2;    // K
+            Pcrit[k] =  2.85e+06; // Pa
+            Vcrit[k] = 0.4389; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.358;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
+        } else if (speciesName(k) == "NC10H20") {
+            IsCrit[k] = 1;
+            Tcrit[k] = 615.0;    // K
+            Pcrit[k] =  2.2e+06; // Pa
+            Vcrit[k] = 0.650; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.491;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
+        } else if (speciesName(k) == "C3H7CHO") {
+            IsCrit[k] = 1;
+            Tcrit[k] = 545.4;    // K
+            Pcrit[k] =  5.38e+06; // Pa
+            Vcrit[k] = 0.2176; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.352;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
+        } else if (speciesName(k) == "NO") {
+            IsCrit[k] = 1;
+            Tcrit[k] = 180.0;    // K
+            Pcrit[k] =  6.48e+06; // Pa
+            Vcrit[k] = 0.058; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.582;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
+        } else if (speciesName(k) == "N2O") {
+            IsCrit[k] = 1;
+            Tcrit[k] = 309.6;    // K
+            Pcrit[k] =  7.255e+06; // Pa
+            Vcrit[k] = 0.097; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.165;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
+        } else if (speciesName(k) == "NH3") {
+            IsCrit[k] = 1;
+            Tcrit[k] = 405.5;    // K
+            Pcrit[k] =  11.35e+06; // Pa
+            Vcrit[k] = 0.0725; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.250;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
+        } else if (speciesName(k) == "NO2") {
+            IsCrit[k] = 1;
+            Tcrit[k] = 431.4;    // K
+            Pcrit[k] =  1.013e+06; // Pa
+            Vcrit[k] = 0.169; // m3/kmol
+            rhocrit[k] = molecularWeight(k) / Vcrit[k]; // kg/m3
+            Zcrit[k] = (Pcrit[k] * Vcrit[k]) / (GasConstant * Tcrit[k]);
+            omega[k] = 0.0;
+            sigma[k] = 0.0;
+            dipole[k] = 0.0;
         } else {
             IsCrit[k] = 0;
             Tcrit[k] = 126.19;    // K
